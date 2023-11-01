@@ -8,18 +8,13 @@ class Player
   end
 
   def get_name
-    puts "What is your name?"
     @name = gets.chomp
-  end # alternatively, could check number of players in game and set to 1 or 2 depending on the value at the Game class level
+  end
 
   def lose_life
     if @lives > 0
       @lives -= 1
     end
-  end
-
-  def reset
-    @lives = 3
   end
 end
 

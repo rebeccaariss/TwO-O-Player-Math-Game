@@ -4,14 +4,16 @@ class Turn
     @num1 = rand(1..20)
     @num2 = rand(1..20)
     @sum = @num1 + @num2
+    @player_answer = nil
   end
 
   def print_question
     puts "What does #{@num1} + #{@num2} equal?"
+    @player_answer = gets.chomp.to_i
   end
 
-  def correct?(answer)
-    answer == @sum
+  def correct?
+    @player_answer == @sum
   end
 end
 
